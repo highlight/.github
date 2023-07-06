@@ -44,25 +44,21 @@ The fastest and most reliable way to get started with highlight.io is signing up
 
 ### Hobby self-hosted
 
-Deploy a hobby instance in one line on Linux with Docker (recommended 16 CPU cores, 32GB RAM, 256GB disk):
+Deploy a hobby instance in one line on Linux with Docker (we recommend at least 8GB of RAM, 4 CPUs, and 64 GB of disk space):
 
 ```bash
 git clone --recurse-submodules https://github.com/highlight/highlight
 # or `git submodule update --init --recursive` on git < 2.13
-
-# if you want to run the backend in debug mode (attach GDB), run the following:
-# export COMPOSE_FILE=compose.yml:compose.dev.yml:compose.debug.yml
-# see the `docker/.env` file for other compose configurations.
-cd docker && docker compose up -d --build
+cd docker && ./run-hobby.sh
 ```
 
 After a brief frontend load time, the app should be accessible at https://localhost:3000
 
-Good for <10k sessions and <50k errors ingested monthly. See our  [docs for more info and limitations](https://www.highlight.io/docs/general/company/open-source/self-host-hobby).
+Good for <10k sessions and <50k errors ingested monthly. See our  [docs for more info and limitations](https://www.highlight.io/docs/general/company/open-source/hosting/self-host-hobby).
 
 ### Enterprise self-hosted
 
-See our [enterprise self-hosted docs](https://www.highlight.io/docs/general/company/open-source/self-host-enterprise) to deploy a scalable, production-ready instance with support from our team.
+See our [enterprise self-hosted docs](https://www.highlight.io/docs/general/company/open-source/hosting/self-host-enterprise) to deploy a scalable, production-ready instance with support from our team.
 
 ## Features
 
